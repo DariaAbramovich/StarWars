@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react"
-import { withErrorApi } from "../../hoc-helpers/witthErrorApi.jsx"
+import { withErrorApi } from "@hoc-helpers/witthErrorApi.jsx"
 
-import { getApiResource } from "../../utils/network"
-import { API_PEOPLE } from "../../utils/network"
-import { getPeopleId, getPeopleImage } from "../../services/getPeopleData"
-import { PeopleList } from "../../components/PeoplePage/PeopleList/PeopleList.jsx"
+import { getApiResource } from "@utils/network"
+import { API_PEOPLE } from "@utils/network"
+import { getPeopleId, getPeopleImage } from "@services/getPeopleData"
+import { PeopleList } from "@components/PeoplePage/PeopleList/PeopleList.jsx"
 
 const PeoplePage = ({setErrorApi}) => {
 
@@ -29,7 +29,7 @@ const PeoplePage = ({setErrorApi}) => {
         else {
             setErrorApi(true)
         }
-    }
+    }               
 
     useEffect(() => {
         getResourse(API_PEOPLE)
