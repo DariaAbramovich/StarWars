@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import "./PeopleList.css"
 
 export const PeopleList = ({ people }) => {
@@ -15,4 +16,7 @@ export const PeopleList = ({ people }) => {
             </ul>
         </div>
     )
+}
+PeopleList.propTypes = {
+    people: PropTypes.array
 }

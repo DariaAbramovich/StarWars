@@ -1,0 +1,36 @@
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-large);
+}
+.link_container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+}
+.link_container a{
+    display: block;
+    margin: 0 10px;
+    padding: 7px 10px;
+    max-width: 70px;
+    border: 2px solid transparent;
+
+    color: var(--color-white);
+    text-align: center;
+    font-family: var(--font-family-main);
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 0 0 2px var(--color-white),
+    0 0 40px var( --color-blue);
+
+}
+.link_container a.active{
+  border: 2px solid var(--color-violet);
+  text-shadow: none;
+
+}
+
