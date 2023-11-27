@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import { useState, useEffect } from "react"
 import { withErrorApi } from "@hoc-helpers/witthErrorApi.jsx"
 
@@ -37,9 +39,14 @@ const PeoplePage = ({setErrorApi}) => {
 
     return (
         <>
-           <h1>Navigation</h1>
+           <h1 className="header_text">Navigation</h1>
            {people && <PeopleList people={people} />}
         </>
     )
 }
+
+PeopleList.propTypes = {
+    setErrorApi: PropTypes.func
+}
+
 export default withErrorApi(PeoplePage)
